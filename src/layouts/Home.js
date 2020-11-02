@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <>
             <h1>Chord Master</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+            <p>Welcome to Chord Master! A web application created to help guitarists in building and learning chords. Understanding chords is essential music theory for all musicians. With Chord Master you can easly find appropriate notes on the fretboard for the chord you want to play. Chord Master also enables you to practice the knowledge of specific chord components. Try it out!</p>
             <div className='goTo'>
                 Click <a href='./chordFinder'>Here</a> to find the chords you want to play!
             </div>

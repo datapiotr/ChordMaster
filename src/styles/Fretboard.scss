@@ -57,9 +57,9 @@
                 border-radius: 50%;
                 line-height: 33px;
                 text-align: center;
-                background: teal;
+                background: white;
                 z-index: 2;
-                color: #eee;
+                color: black;
                 opacity: 0;
         }
         .visible:before {
@@ -68,14 +68,17 @@
         .root:before {
             background: var(--rootcolor);
             opacity: 1;
+            color: white;
         }
         .third:before {
             background: var(--thirdcolor);
             opacity: 1;
+            color: white;
         }
         .fifth:before {
             background: var(--fifthcolor);
             opacity: 1;
+            color: white;
         }
         .single-fretmark {
             &:after {
