@@ -154,16 +154,16 @@ export default function Fretboard() {
                     </label>
                 </div>
                 <select value={root} onChange={handleRootChange}>
-                    {ENotesName.map((note) => {
+                    {ENotesName.map((note, index) => {
                         return (
-                            <option value={note}>{note}</option>
+                            <option value={note} key={index}>{note}</option>
                         )
                     })}
                 </select>
                 <select value={type} onChange={handleTypeChange}>
-                    {typeOfChord.map((chordType) => {
+                    {typeOfChord.map((chordType, index) => {
                         return (
-                            <option value={chordType}>{chordType}</option>
+                            <option value={chordType} key={index}>{chordType}</option>
                         )
                     })}
                 </select>
