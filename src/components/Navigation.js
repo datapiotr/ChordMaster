@@ -6,7 +6,7 @@ function Navigation() {
     return (
         <div className='navigation'>
             <div className='logo'>
-                <img src={require('../img/logo_chord_master2.png')} />
+                <img alt='logo' src={require('../img/logo_chord_master2.png')} />
             </div>
             <ul className='menu'>
                 <li>

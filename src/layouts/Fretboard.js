@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../styles/Fretboard.scss'
 
 export default function Fretboard() {
@@ -51,6 +51,10 @@ export default function Fretboard() {
     const handleRootChange = (e) => {
         setRoot(e.target.value);
     };
+
+    const rootSelect = ENotesName.filter((note, index) => {
+        return ENotesName.indexOf(note) === index;
+    })
 
     const typeOfChord = ['major', 'minor', 'diminished', 'augmented'];
 
@@ -156,7 +160,7 @@ export default function Fretboard() {
                     </label>
                 </div>
                 <select value={root} onChange={handleRootChange}>
-                    {ENotesName.map((note, index) => {
+                    {rootSelect.map((note, index) => {
                         return (
                             <option value={note} key={index}>{note}</option>
                         )
