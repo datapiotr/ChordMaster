@@ -14,10 +14,11 @@
 .fretboard {
     display: flex;
     flex-direction: column;
-    background: #be975b;
+    background: #383739;
     width: 100%;
     height: calc(var(--fretboard-height) * 1px);
-    margin-top: 50px;
+    margin-top: 30px;
+    // overflow: scroll;
     .string {
         width: 100%;
         height: 100%;
@@ -28,7 +29,7 @@
             width: 100%;
             height: calc(var(--string-height) * 1px);
             background: linear-gradient(#eee, #999);
-            box-shadow: 106px 3px 10px #806233;
+            box-shadow: 106px 3px 10px #1e1e1f;
             z-index: 1;
             position: absolute;
             top: calc(var(--string-top-position) * 1px);
@@ -87,7 +88,7 @@
                 height: 20px;
                 width: 20px;
                 border-radius: 50%;
-                background: #806233;
+                background: #DFDBCE;
                 top: calc(var(--fretboard-height) / 2 * 1px);
                 transform: translate(0, -50%);
             }
@@ -100,7 +101,7 @@
                 height: 20px;
                 width: 20px;
                 border-radius: 50%;
-                background: #806233;
+                background: #DFDBCE;
                 transform: translate(-140%, -50%);
             }
             &:after {
@@ -110,7 +111,7 @@
                 height: 20px;
                 width: 20px;
                 border-radius: 50%;
-                background: #806233;
+                background: #DFDBCE;
                 transform: translate(-140%, -50%);
             }
         }
@@ -131,4 +132,30 @@
 
 .active {
     display: block
+}
+
+form {
+    select {
+        padding: 3px 10px;
+        font-size: 17px;
+        border: 1px solid black;
+        border-radius: 20px;
+        &:first-of-type {
+            margin-right: 20px;
+        }
+    }
+    input[type=submit] {
+        margin-top: 30px;
+        border-radius: 20px;
+        padding: 5px 40px;
+        background: transparent;
+        border: 3px solid black;
+        font-size: 20px;
+        transition: .5s;
+        &:hover {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
+    }
 }

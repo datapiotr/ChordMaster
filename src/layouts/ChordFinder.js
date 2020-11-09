@@ -8,7 +8,6 @@ export default function ChordFinder() {
             <h2>
                 Chord Finder
             </h2>
-            <p>You are on the Chord Finder subpage!</p>
             <Fretboard />
         </>
     );

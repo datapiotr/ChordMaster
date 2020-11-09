@@ -22,7 +22,7 @@ export default function Fretboard() {
         setANotesName(['A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A']);
         setENotesName(['E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E']);
         setTwoOctavesNotes(['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B', 'C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']);
-        setRoot('E')
+        setRoot('E');
     }
 
     const changeOnSharps = (e) => {
@@ -33,7 +33,7 @@ export default function Fretboard() {
         setDNotesName(['D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'C', 'C#', 'D']);
         setANotesName(['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A']);
         setTwoOctavesNotes(['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']);
-        setRoot('E')
+        setRoot('E');
     }
 
     const addSingleFretmarks = (index) => {
@@ -149,7 +149,8 @@ export default function Fretboard() {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div className='accidental selector'>
+                <div className='accidental_selector'>
+                    <p>1. Set accidentals:</p>
                     <label>
                         ♭
                         <input type='radio' value='♭' checked={accidentals === '♭'} onChange={changeOnFlats}></input>
@@ -159,20 +160,23 @@ export default function Fretboard() {
                        <input type='radio' value='♯' checked={accidentals === '♯'} onChange={changeOnSharps}></input>
                     </label>
                 </div>
-                <select value={root} onChange={handleRootChange}>
-                    {rootSelect.map((note, index) => {
-                        return (
-                            <option value={note} key={index}>{note}</option>
-                        )
-                    })}
-                </select>
-                <select value={type} onChange={handleTypeChange}>
-                    {typeOfChord.map((chordType, index) => {
-                        return (
-                            <option value={chordType} key={index}>{chordType}</option>
-                        )
-                    })}
-                </select>
+                <div className='chord_selector'>
+                    <p>2. Choose chord:</p>
+                    <select value={root} onChange={handleRootChange}>
+                        {rootSelect.map((note, index) => {
+                            return (
+                                <option value={note} key={index}>{note}</option>
+                            )
+                        })}
+                    </select>
+                    <select value={type} onChange={handleTypeChange}>
+                        {typeOfChord.map((chordType, index) => {
+                            return (
+                                <option value={chordType} key={index}>{chordType}</option>
+                            )
+                        })}
+                    </select>
+                </div>
                 <input type="submit" value="Find" />
             </form>
             <div className='fretboard'>
