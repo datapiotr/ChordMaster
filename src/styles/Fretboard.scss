@@ -6,9 +6,9 @@
     --string-top-position: calc(var(--fretboard-height) / var(--number-of-strings) / 2 - var(--half-string-height));
     --double-fretmark-position-1: calc(var(--fretboard-height) * 0.25);
     --double-fretmark-position-2: calc(var(--fretboard-height) * 0.75);
-    --rootcolor: red;
-    --thirdcolor: blue;
-    --fifthcolor: green;
+    --rootcolor: #F74828;
+    --thirdcolor: #2E6CF5;
+    --fifthcolor: #4E9C1D;
 }
 
 .fretboard {
